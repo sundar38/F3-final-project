@@ -1,0 +1,29 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+
+}
+
+.header {
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+    padding: 5px;
+}
+
+.header .left {
+    color: white;
+}
+
+.header .right a {
+    color: white;
+    text-decoration: none;
+    padding: 5px;
+}
+.mainsection input{
+    width: 500px;
+    
+}
