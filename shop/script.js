@@ -10,6 +10,9 @@ const produtc = {
 };
 
 let men = document.querySelector(".itemsformen")
+let women=document.querySelector(".itemsforwomen")
+let jewel=document.querySelector(".Jewellery")
+let electronics=document.querySelector(".Electronics")
 
 fetch("https://fakestoreapi.com/products")
   .then((datas) => datas.json())
@@ -20,43 +23,129 @@ function validate(data) {
   console.log(data);
   localStorage.setItem("entireitems", JSON.stringify(data))
   // for(let i=0;i<20;i++){
-  //   if(data[i].title = "men's clothing"){
+  //   if(data[i].category = "men's clothing"){
   //     console.log(data[i]);
   //   }
   // }
 
+  data.map((item)=>{
+    let color=["red", "blue", "black"]
+    let size=["s", "l", "m", "xl"]
+    let colourse=[]
+    let sizese=[]
+    let finalindex=Math.floor(Math.random()*3)
+    for(let i=0;i<=finalindex;i++){
+      colourse.push(color[i])
+    }
+    let finalindex1=Math.floor(Math.random()*4)
+      for(let i1=0;i1<=finalindex1;i1++){
+        sizese.push(size[i1])
+      }
+    
+        item.colours=colourse
+    item.sizes=sizese
+  })
 
-
-
-
-
-
-
-
-
-  // if (data.filter((item) => item.category = "men's clothing")) {
-  //   console.log(("hi"));
-  //   console.log(data[item]);
-  //   men.innerHTML = `
-  //   <div class="itemse">
-  //             img.src="${item.image}"
-  //             <div class="info">
-  //               <div class="row">
-  //                 <div class="price">${item.price}</div>
-  //                 <div class="sized">S,M,L</div>
-  //               </div>
-  //               <div class="colors">
-  //                 Colors:
-  //                 <div class="row">
-  //                   <div class="circle" style="background-color: #000"></div>
-  //                   <div class="circle" style="background-color: #4938af"></div>
-  //                   <div class="circle" style="background-color: #203d3e"></div>
-  //                 </div>
-  //               </div>
-  //               <div class="row">Rating:</div>
-  //             </div>
-  //             <button id="addBtn">Add to Cart</button>
-  //           </div>
-  //   `
-  // }
+  for (let i = 0; i < 20; i++) {
+    if (data[i].category == "men's clothing") {
+      console.log(("hi"));
+      console.log(data[i]);
+      men.innerHTML += `
+        <div class="itemse">
+              <img src="${data[i].image}"></img>
+              <div class="info">
+                <div class="row">
+                  <div class="price">$${data[i].price}</div>
+                  <div class="sized">${data[i].sizes}</div>
+                </div>
+                <div class="colors">
+                  Colors: 
+                  <div class="row">
+                    <div class="circle" style="background-color: #000">${data[i].colours[0]}</div>
+                    <div class="circle" style="background-color: #4938af">${data[i].colours[1]}</div>
+                    <div class="circle" style="background-color: #203d3e">${data[i].colours[2]}</div>
+                  </div>
+                </div>
+                <div class="row">Rating:</div>
+              </div>
+              <button id="addBtn">Add to Cart</button>
+            </div>
+    `
+    }
+    if (data[i].category == "women's clothing") {
+      console.log(("hi"));
+      console.log(data[i]);
+      women.innerHTML += `
+      <div class="itemse">
+      <img src="${data[i].image}"></img>
+      <div class="info">
+        <div class="row">
+          <div class="price">$${data[i].price}</div>
+          <div class="sized">${data[i].sizes}</div>
+        </div>
+        <div class="colors">
+          Colors: 
+          <div class="row">
+            <div class="circle" style="background-color: #000">${data[i].colours[0]}</div>
+            <div class="circle" style="background-color: #4938af">${data[i].colours[1]}</div>
+            <div class="circle" style="background-color: #203d3e">${data[i].colours[2]}</div>
+          </div>
+        </div>
+        <div class="row">Rating:</div>
+      </div>
+      <button id="addBtn">Add to Cart</button>
+    </div>
+    `
+    }
+    if (data[i].category == "jewelery") {
+      console.log(("hi"));
+      console.log(data[i]);
+      jewel.innerHTML += `
+      <div class="itemse">
+      <img src="${data[i].image}"></img>
+      <div class="info">
+        <div class="row">
+          <div class="price">$${data[i].price}</div>
+          <div class="sized">${data[i].sizes}</div>
+        </div>
+        <div class="colors">
+          Colors: 
+          <div class="row">
+            <div class="circle" style="background-color: #000">${data[i].colours[0]}</div>
+            <div class="circle" style="background-color: #4938af">${data[i].colours[1]}</div>
+            <div class="circle" style="background-color: #203d3e">${data[i].colours[2]}</div>
+          </div>
+        </div>
+        <div class="row">Rating:</div>
+      </div>
+      <button id="addBtn">Add to Cart</button>
+    </div>
+    `
+    }
+    if (data[i].category == "electronics") {
+      console.log(("hi"));
+      console.log(data[i]);
+      electronics.innerHTML += `
+      <div class="itemse">
+      <img src="${data[i].image}"></img>
+      <div class="info">
+        <div class="row">
+          <div class="price">$${data[i].price}</div>
+          <div class="sized">${data[i].sizes}</div>
+        </div>
+        <div class="colors">
+          Colors: 
+          <div class="row">
+            <div class="circle" style="background-color: #000">${data[i].colours[0]}</div>
+            <div class="circle" style="background-color: #4938af">${data[i].colours[1]}</div>
+            <div class="circle" style="background-color: #203d3e">${data[i].colours[2]}</div>
+          </div>
+        </div>
+        <div class="row">Rating:</div>
+      </div>
+      <button id="addBtn">Add to Cart</button>
+    </div>
+    `
+    }
+  }
 }

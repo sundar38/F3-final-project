@@ -190,3 +190,43 @@ main-content .items .item .circle {
   border-radius: 100%;
   margin: 0 5px;
 }
+.itemse{
+  border: 1px solid black;
+  height: 320px;
+  width: 25%;
+  
+}
+.itemse img{
+  height:190px;
+}
+#addBtn{
+  background-color: black;
+  color: white;
+  /* width: 24vw;
+    height: 4vh;
+} */
+}
+.itemsformen{
+  display: flex;
+  gap: 5px
+}
+.itemsforwomen{
+  display: flex;
+  gap: 5px
+}
+.Jewellery{
+  display: flex;
+  gap: 5px
+}
+.Electronics{
+  display: flex;
+  gap: 5px
+}
+.row{
+  display: flex;
+  justify-content: space-between;
+  padding: 3px;
+}
+.circle{
+  border-radius: 10px;
+}
