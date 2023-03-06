@@ -148,4 +148,17 @@ function validate(data) {
     `
     }
   }
+  //document.querySelector(".filter").addEventListener("click", dofilter)
+  function dofilter(value){
+    let allbuttons=document.querySelectorAll("filter")
+    allbuttons.forEach((button)=>{
+      if(value==button.innerHTML){
+        button.classList.add(".active")
+      }
+      else{
+        button.classList.remove(".active")
+      }
+    })
+  }
+
 }

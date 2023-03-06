@@ -190,43 +190,53 @@ main-content .items .item .circle {
   border-radius: 100%;
   margin: 0 5px;
 }
-.itemse{
+
+.itemse {
   border: 1px solid black;
-  height: 320px;
+  height: 269px;
   width: 25%;
-  
+
 }
-.itemse img{
-  height:190px;
+
+.itemse img {
+  height: 144px;
 }
-#addBtn{
+
+#addBtn {
   background-color: black;
-  color: white;
-  /* width: 24vw;
-    height: 4vh;
-} */
+  color: white; 
+  width: 223px;
 }
-.itemsformen{
+
+.itemsformen {
   display: flex;
   gap: 5px
 }
-.itemsforwomen{
+
+.itemsforwomen {
   display: flex;
   gap: 5px
 }
-.Jewellery{
+
+.Jewellery {
   display: flex;
   gap: 5px
 }
-.Electronics{
+
+.Electronics {
   display: flex;
   gap: 5px
 }
-.row{
+
+.row {
   display: flex;
   justify-content: space-between;
   padding: 3px;
 }
-.circle{
+
+.circle {
   border-radius: 10px;
+}
+.active{
+  background-color: blue;
 }
