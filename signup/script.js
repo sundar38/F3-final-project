@@ -50,7 +50,7 @@ function clicked() {
                 console.log(obj);
                 console.log(userArr);
                 localStorage.setItem("user", JSON.stringify(obj))
-                window.location.href = "/Login/index.html"
+                window.location.href = "../Login/index.html"
             }
 
         }
