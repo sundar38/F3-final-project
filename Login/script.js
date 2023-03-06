@@ -8,7 +8,7 @@ function login() {
    
     if(users.filter((data)=> data.Email==email).length==1){
         console.log("login is succes");
-        window.location.href="./shop/index.html"
+        window.location.href="../shop/index.html"
     }
     else{
         error.innerHTML="Please enter valid email or signup "
